@@ -21,7 +21,7 @@
       </button>
     </div>
 
-    <div v-if="loading">Načítám…</div>
+    <div v-if="loading" class="loading">Načítám…</div>
     <div v-if="error" class="error">{{ error }}</div>
 
     <ul v-if="results.length" class="results_list">
@@ -236,6 +236,12 @@ button {
 
 .save_btn:hover {
   background: linear-gradient(135deg, #a0cfe0, #7dabec);
+}
+
+.loading {
+  font-family: "Nunito sans", sans-serif;
+  font-size: 16px;
+  color: #334155;
 }
 
 .error {
